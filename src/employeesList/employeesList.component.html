@@ -1,0 +1,33 @@
+<div>
+  <title>{{title}}</title>
+  <head>
+    {{title}}
+  </head>
+  <label for="filter">
+    Filter by:
+  </label><br>
+  <input type="text" name="filter" id="filter" value="" [(ngModel)]="nameFilter">
+  <br><br>
+   <label for="count" id="count">
+    Total Number of Employees: {{len}}</label>
+    <br><br>
+  <table border="2" >
+   <thead>
+      <tr>
+        <th>Emp ID</th> <th>Name</th> <th>Location</th><th>Email</th> <th>Mobile</th> <th>Edit</th> <th>Delete</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor='let employee of employees | employeeFilter : nameFilter; let i=index;let last = last;' >
+       <td><a routerLink= "/employees/{{employee.id}}" >{{employee.id}}</a></td> 
+        <td id="name{{employee.id}}">{{employee.name | uppercase}}</td>
+        <td id="loc{{employee.id}}">{{employee.location}}</td>
+        <td id="email{{employee.id}}">{{employee.email}}</td>
+        <td id="mob{{employee.id}}">{{employee.mobile}}</td>
+       <td><a  routerLink= "/editEmployee/{{employee.id}}" >Edit{{employee.id}}</a></td>
+       <td><a routerLink= "/deleteEmployee/{{employee.id}}" >Delete{{employee.id}}</a></td>
+       {{last ? setLength(i) : ''}}
+     </tr>{{zeroLength()}}
+   </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+body {
+    margin:  auto;
+    display: inline-block;
+}
+label{
+  font-weight: bold;
+}

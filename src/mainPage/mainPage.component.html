@@ -1,0 +1,18 @@
+<div>
+  <title>Employee Management System </title>
+  <h1>
+   {{title}}
+  </h1>
+  <body>
+    <nav>
+   <a routerLink= "employees" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Employees List</a>
+   &nbsp;&nbsp;
+   <a routerLink= "addEmployee" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Add Employee</a>
+    </nav> <br>
+    <router-outlet></router-outlet>
+  </body>
+  <p>
+    Start clicking to see some magic happen :):)
+  </p>
+ </div>
+ <p style="text-align:right; font-style:italic; color:green;">© K</p>

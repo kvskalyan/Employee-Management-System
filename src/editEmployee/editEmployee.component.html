@@ -1,0 +1,33 @@
+<div> <title>{{title}}</title>
+  <h3>
+    {{title}}
+  </h3>
+  <label for="name">
+    Employee Name:
+  </label>
+  <input type="text" name="name" id="name" value="{{name}}" [(ngModel)]="name" (input)="changedName($event)"/>
+  <br>
+  <label for="location">
+    Location:
+  </label>
+  <select id="location" value="{{location}}" [(ngModel)]="location" (input)="selectedLocation($event)" >
+    <option value="Bangalore">Bangalore</option>
+    <option value="Chennai">Chennai</option>
+   <option value="Pune">Pune</option>
+   <option value="Hyderabad">Hyderabad</option>
+  </select> 
+  <br>
+  <label for="email">
+    Email:
+  </label>
+  <input type="text" name="email" id="email" value="{{email}}" [(ngModel)]="email" (input)="changedEmail($event)"/>
+  <br>
+  <label for="mobile">
+    Mobile:
+  </label>
+  <input type="text" name="mobile" id="mobile" value="{{mobile}}" [(ngModel)]="mobile" (input)="changedMobile($event)"/>
+  <br>
+  <button type="submit" id="add" [disabled]=!isDisabled (click)="editEmployee($event)">Update</button> &nbsp;<br>
+  {{done}}
+ 
+</div>

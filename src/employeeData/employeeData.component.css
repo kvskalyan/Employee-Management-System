@@ -1,0 +1,6 @@
+body span{
+  display: inline-block;
+}
+label{
+  font-weight: bold;
+}

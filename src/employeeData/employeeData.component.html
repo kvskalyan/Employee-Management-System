@@ -1,0 +1,22 @@
+<head>
+  <title>{{title}}</title>
+</head>
+<body>
+  <h3>{{title}}</h3>
+  <label>ID:</label>
+  <span id="id">{{employee.id}}</span>
+  <br>
+  <label>Name:</label>
+  <span id="name">{{employee.name}}</span>
+  <br>
+  <label>Location:</label>
+  <span id="location">{{employee.location}}</span>
+  <br>
+  <label>Email:</label>
+  <span id="email">{{employee.email}}</span>
+  <br>
+  <label>Mobile:</label>
+  <span id="mobile">{{employee.mobile}}</span>
+  <br>
+  <button type="submit" id="back" (click)="goBack($event)">Back</button>
+</body>
